@@ -4,7 +4,6 @@ const zip = require('gulp-zip');
 const clean = require('gulp-clean');
 const yarn = require('gulp-yarn');
 const shell = require('gulp-shell');
-const git = require('gulp-git');
 import moment from "moment";
 
 const dist = argv.dist || 'dist';
@@ -36,12 +35,6 @@ gulp.task('packing_s3', ['webpack-demo'], function () {
   if (argv.scminfo)
     return gulp.src([r + '/assets/**'], {base: r + '/'})
       .pipe(gulp.dest(dist + '/s3/' + argv.scminfo));
-  else {
-    return git.exec({args: 'log -1 --pretty=format:%h'}, function (err, stdout) {
-      return gulp.src([r + '/assets/**'], {base: r + '/'})
-        .pipe(gulp.dest(dist + '/s3/' + stdout));
-    });
-  }
 });
 
 gulp.task('install-npm-dependencies', function () {
