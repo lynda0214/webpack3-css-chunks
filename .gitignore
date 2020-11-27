@@ -1,0 +1,8 @@
+/.idea
+.idea/dictionaries
+.idea/libraries
+.idea/workspace.xml
+/dist
+/node_modules
+/web
+/app/report.html
