@@ -26,7 +26,7 @@ gulp.task('archive', () => {
 gulp.task('packing', ['packing_s3'], function () {
   const r = argv.webRoute || 'web';
   return gulp.src([r + '/*'], {base: '.'})
-    .pipe(zip('cosmetic-ui.zip'))
+    .pipe(zip('webpack-test.zip'))
     .pipe(gulp.dest(dist));
 });
 
