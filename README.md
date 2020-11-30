@@ -16,4 +16,4 @@ to start, run `yarn`
 
 to build, run `gulp`
 
-to test on [localhost](http://localhost/web/sample), run `babel-node dev-server.js`
+to test on [http://localhost/web/sample](http://localhost/web/sample), run `babel-node dev-server.js`
